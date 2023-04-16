@@ -1,4 +1,5 @@
-﻿Public Class form_customer
+﻿Imports System.IO
+Public Class form_customer
 
     Private Sub btn_oddr_dtls_Click(sender As Object, e As EventArgs) Handles btn_oddr_dtls.Click
 
@@ -32,4 +33,17 @@
             MsgBox("Unable to create backup file", vbOKOnly, "Status")
         End Try
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles close_btn_cstmr.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub load_data_Click(sender As Object, e As EventArgs) Handles load_data.Click
+        Try
+            Dim as
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
 End Class

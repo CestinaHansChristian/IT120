@@ -33,10 +33,9 @@ Partial Class form_customer
         Me.btn_prod = New System.Windows.Forms.Button()
         Me.btn_suppl = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.backup_db = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.close_btn_cstmr = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SuspendLayout()
         '
         'cstmr_list
@@ -134,47 +133,32 @@ Partial Class form_customer
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Customers"
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Goldenrod
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(290, 28)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(178, 22)
-        Me.Button1.TabIndex = 6
-        Me.Button1.Text = "Load cstmr Details"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'backup_db
         '
         Me.backup_db.BackColor = System.Drawing.Color.Aqua
         Me.backup_db.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.backup_db.Location = New System.Drawing.Point(495, 28)
+        Me.backup_db.Location = New System.Drawing.Point(510, 16)
         Me.backup_db.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.backup_db.Name = "backup_db"
-        Me.backup_db.Size = New System.Drawing.Size(82, 22)
+        Me.backup_db.Size = New System.Drawing.Size(87, 38)
         Me.backup_db.TabIndex = 7
         Me.backup_db.Text = "Backup DB"
         Me.backup_db.UseVisualStyleBackColor = False
         '
-        'Button2
+        'close_btn_cstmr
         '
-        Me.Button2.Location = New System.Drawing.Point(389, 23)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(8, 8)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.close_btn_cstmr.BackColor = System.Drawing.Color.Salmon
+        Me.close_btn_cstmr.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.close_btn_cstmr.Location = New System.Drawing.Point(10, 231)
+        Me.close_btn_cstmr.Name = "close_btn_cstmr"
+        Me.close_btn_cstmr.Size = New System.Drawing.Size(80, 23)
+        Me.close_btn_cstmr.TabIndex = 9
+        Me.close_btn_cstmr.Text = "Close"
+        Me.close_btn_cstmr.UseVisualStyleBackColor = False
         '
-        'Button3
+        'OpenFileDialog1
         '
-        Me.Button3.Location = New System.Drawing.Point(54, 236)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 9
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'form_customer
         '
@@ -183,10 +167,8 @@ Partial Class form_customer
         Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(609, 266)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.close_btn_cstmr)
         Me.Controls.Add(Me.backup_db)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_suppl)
         Me.Controls.Add(Me.btn_prod)
@@ -215,8 +197,7 @@ Partial Class form_customer
     Friend WithEvents L_name_col As ColumnHeader
     Friend WithEvents pnum_col As ColumnHeader
     Friend WithEvents email_col As ColumnHeader
-    Friend WithEvents Button1 As Button
     Friend WithEvents backup_db As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents close_btn_cstmr As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
