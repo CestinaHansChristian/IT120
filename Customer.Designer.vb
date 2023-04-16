@@ -35,7 +35,6 @@ Partial Class form_customer
         Me.Label1 = New System.Windows.Forms.Label()
         Me.backup_db = New System.Windows.Forms.Button()
         Me.close_btn_cstmr = New System.Windows.Forms.Button()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.SuspendLayout()
         '
         'cstmr_list
@@ -151,14 +150,10 @@ Partial Class form_customer
         Me.close_btn_cstmr.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.close_btn_cstmr.Location = New System.Drawing.Point(10, 231)
         Me.close_btn_cstmr.Name = "close_btn_cstmr"
-        Me.close_btn_cstmr.Size = New System.Drawing.Size(80, 23)
+        Me.close_btn_cstmr.Size = New System.Drawing.Size(80, 27)
         Me.close_btn_cstmr.TabIndex = 9
         Me.close_btn_cstmr.Text = "Close"
         Me.close_btn_cstmr.UseVisualStyleBackColor = False
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'form_customer
         '
@@ -199,5 +194,4 @@ Partial Class form_customer
     Friend WithEvents email_col As ColumnHeader
     Friend WithEvents backup_db As Button
     Friend WithEvents close_btn_cstmr As Button
-    Friend WithEvents OpenFileDialog1 As OpenFileDialog
 End Class
