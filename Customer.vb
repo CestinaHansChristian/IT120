@@ -29,7 +29,7 @@
             Process.Start("cmd", "/c mysqldump -u root -p Admin123 it120e > C:\Users\user\Desktop\backupDB.sql")
             MessageBox.Show("Backup successfully created and added to Desktop", vbInformation, "Status")
         Catch ex As Exception
-            MessageBox.Show("Unable to create backup file", "Status")
+            MessageBox.Show("Unable to create backup file", vbInformation, "Status")
         End Try
     End Sub
 
