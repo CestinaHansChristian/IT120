@@ -35,6 +35,8 @@ Partial Class form_customer
         Me.Label1 = New System.Windows.Forms.Label()
         Me.backup_db = New System.Windows.Forms.Button()
         Me.close_btn_cstmr = New System.Windows.Forms.Button()
+        Me.load_data = New System.Windows.Forms.OpenFileDialog()
+        Me.load_cstmr_info = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cstmr_list
@@ -42,9 +44,9 @@ Partial Class form_customer
         Me.cstmr_list.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.cust_ID_col, Me.F_name_col, Me.L_name_col, Me.pnum_col, Me.email_col})
         Me.cstmr_list.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cstmr_list.GridLines = True
-        Me.cstmr_list.Location = New System.Drawing.Point(127, 62)
+        Me.cstmr_list.Location = New System.Drawing.Point(127, 96)
         Me.cstmr_list.Name = "cstmr_list"
-        Me.cstmr_list.Size = New System.Drawing.Size(472, 196)
+        Me.cstmr_list.Size = New System.Drawing.Size(536, 220)
         Me.cstmr_list.TabIndex = 0
         Me.cstmr_list.UseCompatibleStateImageBehavior = False
         Me.cstmr_list.View = System.Windows.Forms.View.Details
@@ -78,7 +80,7 @@ Partial Class form_customer
         '
         Me.btn_orders.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_orders.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_orders.Location = New System.Drawing.Point(10, 166)
+        Me.btn_orders.Location = New System.Drawing.Point(12, 211)
         Me.btn_orders.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_orders.Name = "btn_orders"
         Me.btn_orders.Size = New System.Drawing.Size(82, 22)
@@ -90,7 +92,7 @@ Partial Class form_customer
         '
         Me.btn_oddr_dtls.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_oddr_dtls.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_oddr_dtls.Location = New System.Drawing.Point(10, 59)
+        Me.btn_oddr_dtls.Location = New System.Drawing.Point(12, 96)
         Me.btn_oddr_dtls.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_oddr_dtls.Name = "btn_oddr_dtls"
         Me.btn_oddr_dtls.Size = New System.Drawing.Size(99, 22)
@@ -102,7 +104,7 @@ Partial Class form_customer
         '
         Me.btn_prod.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_prod.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_prod.Location = New System.Drawing.Point(10, 94)
+        Me.btn_prod.Location = New System.Drawing.Point(12, 133)
         Me.btn_prod.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_prod.Name = "btn_prod"
         Me.btn_prod.Size = New System.Drawing.Size(82, 22)
@@ -114,7 +116,7 @@ Partial Class form_customer
         '
         Me.btn_suppl.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_suppl.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_suppl.Location = New System.Drawing.Point(10, 128)
+        Me.btn_suppl.Location = New System.Drawing.Point(12, 170)
         Me.btn_suppl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_suppl.Name = "btn_suppl"
         Me.btn_suppl.Size = New System.Drawing.Size(82, 22)
@@ -126,7 +128,7 @@ Partial Class form_customer
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(127, 28)
+        Me.Label1.Location = New System.Drawing.Point(12, 16)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(106, 25)
         Me.Label1.TabIndex = 5
@@ -136,7 +138,7 @@ Partial Class form_customer
         '
         Me.backup_db.BackColor = System.Drawing.Color.Aqua
         Me.backup_db.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.backup_db.Location = New System.Drawing.Point(510, 16)
+        Me.backup_db.Location = New System.Drawing.Point(576, 16)
         Me.backup_db.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.backup_db.Name = "backup_db"
         Me.backup_db.Size = New System.Drawing.Size(87, 38)
@@ -148,20 +150,36 @@ Partial Class form_customer
         '
         Me.close_btn_cstmr.BackColor = System.Drawing.Color.Salmon
         Me.close_btn_cstmr.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.close_btn_cstmr.Location = New System.Drawing.Point(10, 231)
+        Me.close_btn_cstmr.Location = New System.Drawing.Point(12, 274)
         Me.close_btn_cstmr.Name = "close_btn_cstmr"
         Me.close_btn_cstmr.Size = New System.Drawing.Size(80, 27)
         Me.close_btn_cstmr.TabIndex = 9
         Me.close_btn_cstmr.Text = "Close"
         Me.close_btn_cstmr.UseVisualStyleBackColor = False
         '
+        'load_data
+        '
+        Me.load_data.FileName = "load data"
+        '
+        'load_cstmr_info
+        '
+        Me.load_cstmr_info.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.load_cstmr_info.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.load_cstmr_info.Location = New System.Drawing.Point(376, 16)
+        Me.load_cstmr_info.Name = "load_cstmr_info"
+        Me.load_cstmr_info.Size = New System.Drawing.Size(174, 38)
+        Me.load_cstmr_info.TabIndex = 10
+        Me.load_cstmr_info.Text = "Load Customer Info"
+        Me.load_cstmr_info.UseVisualStyleBackColor = False
+        '
         'form_customer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
-        Me.ClientSize = New System.Drawing.Size(625, 266)
+        Me.ClientSize = New System.Drawing.Size(675, 328)
         Me.ControlBox = False
+        Me.Controls.Add(Me.load_cstmr_info)
         Me.Controls.Add(Me.close_btn_cstmr)
         Me.Controls.Add(Me.backup_db)
         Me.Controls.Add(Me.Label1)
@@ -194,4 +212,6 @@ Partial Class form_customer
     Friend WithEvents email_col As ColumnHeader
     Friend WithEvents backup_db As Button
     Friend WithEvents close_btn_cstmr As Button
+    Friend WithEvents load_data As OpenFileDialog
+    Friend WithEvents load_cstmr_info As Button
 End Class

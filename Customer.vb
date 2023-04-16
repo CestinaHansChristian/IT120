@@ -38,6 +38,7 @@ Public Class form_customer
         Application.Exit()
     End Sub
 
+    Private Sub load_data_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles load_data.FileOk
 
-
+    End Sub
 End Class
