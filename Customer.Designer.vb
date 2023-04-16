@@ -35,6 +35,8 @@ Partial Class form_customer
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.backup_db = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'cstmr_list
@@ -156,6 +158,24 @@ Partial Class form_customer
         Me.backup_db.Text = "Backup DB"
         Me.backup_db.UseVisualStyleBackColor = False
         '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(389, 23)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(8, 8)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(54, 236)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 9
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'form_customer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -163,6 +183,8 @@ Partial Class form_customer
         Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(609, 266)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.backup_db)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
@@ -195,4 +217,6 @@ Partial Class form_customer
     Friend WithEvents email_col As ColumnHeader
     Friend WithEvents Button1 As Button
     Friend WithEvents backup_db As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class
