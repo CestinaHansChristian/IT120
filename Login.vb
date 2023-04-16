@@ -18,5 +18,4 @@ Public Class Login_page
     Private Sub exit_btn_Click(sender As Object, e As EventArgs) Handles exit_btn.Click
         Application.Exit()
     End Sub
-
 End Class

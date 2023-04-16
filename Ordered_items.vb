@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub btn_oi_update_Click(sender As Object, e As EventArgs) Handles btn_oi_update.Click
-        update_table.Show()
+        Ordered_items_update.Show()
     End Sub
 
 End Class
