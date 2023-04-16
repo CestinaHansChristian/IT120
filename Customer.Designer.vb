@@ -35,7 +35,6 @@ Partial Class form_customer
         Me.Label1 = New System.Windows.Forms.Label()
         Me.backup_db = New System.Windows.Forms.Button()
         Me.close_btn_cstmr = New System.Windows.Forms.Button()
-        Me.load_data = New System.Windows.Forms.OpenFileDialog()
         Me.load_cstmr_info = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -46,7 +45,7 @@ Partial Class form_customer
         Me.cstmr_list.GridLines = True
         Me.cstmr_list.Location = New System.Drawing.Point(127, 96)
         Me.cstmr_list.Name = "cstmr_list"
-        Me.cstmr_list.Size = New System.Drawing.Size(536, 220)
+        Me.cstmr_list.Size = New System.Drawing.Size(535, 220)
         Me.cstmr_list.TabIndex = 0
         Me.cstmr_list.UseCompatibleStateImageBehavior = False
         Me.cstmr_list.View = System.Windows.Forms.View.Details
@@ -157,10 +156,6 @@ Partial Class form_customer
         Me.close_btn_cstmr.Text = "Close"
         Me.close_btn_cstmr.UseVisualStyleBackColor = False
         '
-        'load_data
-        '
-        Me.load_data.FileName = "load data"
-        '
         'load_cstmr_info
         '
         Me.load_cstmr_info.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
@@ -212,6 +207,5 @@ Partial Class form_customer
     Friend WithEvents email_col As ColumnHeader
     Friend WithEvents backup_db As Button
     Friend WithEvents close_btn_cstmr As Button
-    Friend WithEvents load_data As OpenFileDialog
     Friend WithEvents load_cstmr_info As Button
 End Class
