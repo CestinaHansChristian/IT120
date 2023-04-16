@@ -32,26 +32,28 @@ Partial Class oi_delete_table
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(68, 69)
+        Me.Label1.Location = New System.Drawing.Point(60, 52)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(38, 31)
+        Me.Label1.Size = New System.Drawing.Size(32, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ID"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 73)
+        Me.TextBox1.Location = New System.Drawing.Point(98, 55)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(125, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(110, 23)
         Me.TextBox1.TabIndex = 1
         '
         'btn_proceed_deleteTable
         '
         Me.btn_proceed_deleteTable.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_proceed_deleteTable.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_proceed_deleteTable.Location = New System.Drawing.Point(21, 148)
+        Me.btn_proceed_deleteTable.Location = New System.Drawing.Point(18, 111)
+        Me.btn_proceed_deleteTable.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_proceed_deleteTable.Name = "btn_proceed_deleteTable"
-        Me.btn_proceed_deleteTable.Size = New System.Drawing.Size(94, 38)
+        Me.btn_proceed_deleteTable.Size = New System.Drawing.Size(82, 28)
         Me.btn_proceed_deleteTable.TabIndex = 2
         Me.btn_proceed_deleteTable.Text = "Proceed"
         Me.btn_proceed_deleteTable.UseVisualStyleBackColor = False
@@ -60,23 +62,26 @@ Partial Class oi_delete_table
         '
         Me.btn_oi_delete_table.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btn_oi_delete_table.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_oi_delete_table.Location = New System.Drawing.Point(206, 148)
+        Me.btn_oi_delete_table.Location = New System.Drawing.Point(180, 111)
+        Me.btn_oi_delete_table.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_oi_delete_table.Name = "btn_oi_delete_table"
-        Me.btn_oi_delete_table.Size = New System.Drawing.Size(94, 38)
+        Me.btn_oi_delete_table.Size = New System.Drawing.Size(82, 28)
         Me.btn_oi_delete_table.TabIndex = 3
         Me.btn_oi_delete_table.Text = "Close"
         Me.btn_oi_delete_table.UseVisualStyleBackColor = False
         '
         'oi_delete_table
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
-        Me.ClientSize = New System.Drawing.Size(312, 205)
+        Me.ClientSize = New System.Drawing.Size(273, 154)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btn_oi_delete_table)
         Me.Controls.Add(Me.btn_proceed_deleteTable)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MdiChildrenMinimizedAnchorBottom = False
         Me.MinimizeBox = False

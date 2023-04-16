@@ -32,5 +32,4 @@
             MsgBox("Unable to create backup file", vbOKOnly, "Status")
         End Try
     End Sub
-
 End Class

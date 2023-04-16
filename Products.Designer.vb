@@ -39,10 +39,9 @@ Partial Class Form_products
         Me.cstmr_list.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.prod_id_col, Me.prod_name_col, Me.prod_suppID_col, Me.prod_unitPrice_col})
         Me.cstmr_list.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cstmr_list.GridLines = True
-        Me.cstmr_list.Location = New System.Drawing.Point(150, 66)
-        Me.cstmr_list.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.cstmr_list.Location = New System.Drawing.Point(131, 50)
         Me.cstmr_list.Name = "cstmr_list"
-        Me.cstmr_list.Size = New System.Drawing.Size(450, 266)
+        Me.cstmr_list.Size = New System.Drawing.Size(394, 200)
         Me.cstmr_list.TabIndex = 11
         Me.cstmr_list.UseCompatibleStateImageBehavior = False
         Me.cstmr_list.View = System.Windows.Forms.View.Details
@@ -71,9 +70,10 @@ Partial Class Form_products
         '
         Me.btn_suppl.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_suppl.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_suppl.Location = New System.Drawing.Point(12, 121)
+        Me.btn_suppl.Location = New System.Drawing.Point(10, 91)
+        Me.btn_suppl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_suppl.Name = "btn_suppl"
-        Me.btn_suppl.Size = New System.Drawing.Size(94, 29)
+        Me.btn_suppl.Size = New System.Drawing.Size(82, 22)
         Me.btn_suppl.TabIndex = 15
         Me.btn_suppl.Text = "Supply"
         Me.btn_suppl.UseVisualStyleBackColor = False
@@ -82,9 +82,10 @@ Partial Class Form_products
         '
         Me.btn_prod.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_prod.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_prod.Location = New System.Drawing.Point(12, 70)
+        Me.btn_prod.Location = New System.Drawing.Point(10, 52)
+        Me.btn_prod.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_prod.Name = "btn_prod"
-        Me.btn_prod.Size = New System.Drawing.Size(109, 29)
+        Me.btn_prod.Size = New System.Drawing.Size(95, 22)
         Me.btn_prod.TabIndex = 14
         Me.btn_prod.Text = "Order Items"
         Me.btn_prod.UseVisualStyleBackColor = False
@@ -93,9 +94,10 @@ Partial Class Form_products
         '
         Me.btn_oddr_dtls.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_oddr_dtls.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_oddr_dtls.Location = New System.Drawing.Point(12, 218)
+        Me.btn_oddr_dtls.Location = New System.Drawing.Point(10, 164)
+        Me.btn_oddr_dtls.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_oddr_dtls.Name = "btn_oddr_dtls"
-        Me.btn_oddr_dtls.Size = New System.Drawing.Size(94, 29)
+        Me.btn_oddr_dtls.Size = New System.Drawing.Size(82, 22)
         Me.btn_oddr_dtls.TabIndex = 13
         Me.btn_oddr_dtls.Text = "Customers"
         Me.btn_oddr_dtls.UseVisualStyleBackColor = False
@@ -104,9 +106,10 @@ Partial Class Form_products
         '
         Me.btn_orders.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_orders.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_orders.Location = New System.Drawing.Point(12, 170)
+        Me.btn_orders.Location = New System.Drawing.Point(10, 128)
+        Me.btn_orders.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_orders.Name = "btn_orders"
-        Me.btn_orders.Size = New System.Drawing.Size(94, 29)
+        Me.btn_orders.Size = New System.Drawing.Size(82, 22)
         Me.btn_orders.TabIndex = 12
         Me.btn_orders.Text = "Orders"
         Me.btn_orders.UseVisualStyleBackColor = False
@@ -115,24 +118,26 @@ Partial Class Form_products
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(150, 19)
+        Me.Label1.Location = New System.Drawing.Point(131, 14)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(95, 28)
+        Me.Label1.Size = New System.Drawing.Size(77, 21)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Products"
         '
         'Form_products
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
-        Me.ClientSize = New System.Drawing.Size(612, 351)
+        Me.ClientSize = New System.Drawing.Size(536, 263)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btn_suppl)
         Me.Controls.Add(Me.btn_prod)
         Me.Controls.Add(Me.btn_oddr_dtls)
         Me.Controls.Add(Me.btn_orders)
         Me.Controls.Add(Me.cstmr_list)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MdiChildrenMinimizedAnchorBottom = False
         Me.MinimizeBox = False

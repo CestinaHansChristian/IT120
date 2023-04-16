@@ -42,9 +42,10 @@ Partial Class Ordered_items_update
         '
         Me.btn_oi_exit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btn_oi_exit.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_oi_exit.Location = New System.Drawing.Point(327, 379)
+        Me.btn_oi_exit.Location = New System.Drawing.Point(286, 284)
+        Me.btn_oi_exit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_oi_exit.Name = "btn_oi_exit"
-        Me.btn_oi_exit.Size = New System.Drawing.Size(96, 47)
+        Me.btn_oi_exit.Size = New System.Drawing.Size(84, 35)
         Me.btn_oi_exit.TabIndex = 38
         Me.btn_oi_exit.Text = "Cancel"
         Me.btn_oi_exit.UseVisualStyleBackColor = False
@@ -53,27 +54,29 @@ Partial Class Ordered_items_update
         '
         Me.btn_oi_insert.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btn_oi_insert.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.btn_oi_insert.Location = New System.Drawing.Point(16, 379)
+        Me.btn_oi_insert.Location = New System.Drawing.Point(14, 284)
+        Me.btn_oi_insert.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btn_oi_insert.Name = "btn_oi_insert"
-        Me.btn_oi_insert.Size = New System.Drawing.Size(94, 47)
+        Me.btn_oi_insert.Size = New System.Drawing.Size(82, 35)
         Me.btn_oi_insert.TabIndex = 37
         Me.btn_oi_insert.Text = "Save"
         Me.btn_oi_insert.UseVisualStyleBackColor = False
         '
         'oi_update_DatePicker
         '
-        Me.oi_update_DatePicker.Location = New System.Drawing.Point(171, 254)
+        Me.oi_update_DatePicker.Location = New System.Drawing.Point(150, 190)
+        Me.oi_update_DatePicker.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.oi_update_DatePicker.Name = "oi_update_DatePicker"
-        Me.oi_update_DatePicker.Size = New System.Drawing.Size(250, 27)
+        Me.oi_update_DatePicker.Size = New System.Drawing.Size(219, 23)
         Me.oi_update_DatePicker.TabIndex = 36
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(27, 313)
+        Me.Label5.Location = New System.Drawing.Point(24, 235)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(109, 28)
+        Me.Label5.Size = New System.Drawing.Size(88, 21)
         Me.Label5.TabIndex = 35
         Me.Label5.Text = "Product ID"
         '
@@ -81,9 +84,9 @@ Partial Class Ordered_items_update
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(27, 252)
+        Me.Label4.Location = New System.Drawing.Point(24, 189)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(122, 28)
+        Me.Label4.Size = New System.Drawing.Size(98, 21)
         Me.Label4.TabIndex = 34
         Me.Label4.Text = "Todays Date"
         '
@@ -91,9 +94,9 @@ Partial Class Ordered_items_update
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(14, 189)
+        Me.Label3.Location = New System.Drawing.Point(12, 142)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(135, 28)
+        Me.Label3.Size = New System.Drawing.Size(108, 21)
         Me.Label3.TabIndex = 33
         Me.Label3.Text = "Total Amount"
         '
@@ -101,9 +104,9 @@ Partial Class Ordered_items_update
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(16, 124)
+        Me.Label2.Location = New System.Drawing.Point(14, 93)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(133, 28)
+        Me.Label2.Size = New System.Drawing.Size(108, 21)
         Me.Label2.TabIndex = 32
         Me.Label2.Text = "Product Price"
         '
@@ -111,63 +114,69 @@ Partial Class Ordered_items_update
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(59, 63)
+        Me.Label1.Location = New System.Drawing.Point(52, 47)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(90, 28)
+        Me.Label1.Size = New System.Drawing.Size(72, 21)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "Quantity"
         '
         'oi_update_qty
         '
-        Me.oi_update_qty.Location = New System.Drawing.Point(171, 67)
+        Me.oi_update_qty.Location = New System.Drawing.Point(150, 50)
+        Me.oi_update_qty.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.oi_update_qty.Name = "oi_update_qty"
-        Me.oi_update_qty.Size = New System.Drawing.Size(252, 27)
+        Me.oi_update_qty.Size = New System.Drawing.Size(221, 23)
         Me.oi_update_qty.TabIndex = 30
         '
         'oi_update_ProdPrice
         '
-        Me.oi_update_ProdPrice.Location = New System.Drawing.Point(171, 124)
+        Me.oi_update_ProdPrice.Location = New System.Drawing.Point(150, 93)
+        Me.oi_update_ProdPrice.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.oi_update_ProdPrice.Name = "oi_update_ProdPrice"
-        Me.oi_update_ProdPrice.Size = New System.Drawing.Size(252, 27)
+        Me.oi_update_ProdPrice.Size = New System.Drawing.Size(221, 23)
         Me.oi_update_ProdPrice.TabIndex = 29
         '
         'oi_update_TotalAmnt
         '
-        Me.oi_update_TotalAmnt.Location = New System.Drawing.Point(171, 189)
+        Me.oi_update_TotalAmnt.Location = New System.Drawing.Point(150, 142)
+        Me.oi_update_TotalAmnt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.oi_update_TotalAmnt.Name = "oi_update_TotalAmnt"
-        Me.oi_update_TotalAmnt.Size = New System.Drawing.Size(252, 27)
+        Me.oi_update_TotalAmnt.Size = New System.Drawing.Size(221, 23)
         Me.oi_update_TotalAmnt.TabIndex = 28
         '
         'oi_update_ProdID
         '
-        Me.oi_update_ProdID.Location = New System.Drawing.Point(171, 317)
+        Me.oi_update_ProdID.Location = New System.Drawing.Point(150, 238)
+        Me.oi_update_ProdID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.oi_update_ProdID.Name = "oi_update_ProdID"
-        Me.oi_update_ProdID.Size = New System.Drawing.Size(252, 27)
+        Me.oi_update_ProdID.Size = New System.Drawing.Size(221, 23)
         Me.oi_update_ProdID.TabIndex = 27
         '
         'oi_update_ID
         '
-        Me.oi_update_ID.Location = New System.Drawing.Point(169, 12)
+        Me.oi_update_ID.Location = New System.Drawing.Point(148, 9)
+        Me.oi_update_ID.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.oi_update_ID.Name = "oi_update_ID"
-        Me.oi_update_ID.Size = New System.Drawing.Size(252, 27)
+        Me.oi_update_ID.Size = New System.Drawing.Size(221, 23)
         Me.oi_update_ID.TabIndex = 39
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(104, 12)
+        Me.Label6.Location = New System.Drawing.Point(91, 9)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(32, 28)
+        Me.Label6.Size = New System.Drawing.Size(26, 21)
         Me.Label6.TabIndex = 40
         Me.Label6.Text = "ID"
         '
-        'update_table
+        'Ordered_items_update
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
-        Me.ClientSize = New System.Drawing.Size(471, 440)
+        Me.ClientSize = New System.Drawing.Size(412, 330)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.oi_update_ID)
         Me.Controls.Add(Me.btn_oi_exit)
@@ -182,10 +191,11 @@ Partial Class Ordered_items_update
         Me.Controls.Add(Me.oi_update_ProdPrice)
         Me.Controls.Add(Me.oi_update_TotalAmnt)
         Me.Controls.Add(Me.oi_update_ProdID)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MaximizeBox = False
         Me.MdiChildrenMinimizedAnchorBottom = False
         Me.MinimizeBox = False
-        Me.Name = "update_table"
+        Me.Name = "Ordered_items_update"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Update"
         Me.ResumeLayout(False)
