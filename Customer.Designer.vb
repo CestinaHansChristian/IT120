@@ -42,7 +42,7 @@ Partial Class form_customer
         Me.cstmr_list.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.cust_ID_col, Me.F_name_col, Me.L_name_col, Me.pnum_col, Me.email_col})
         Me.cstmr_list.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.cstmr_list.GridLines = True
-        Me.cstmr_list.Location = New System.Drawing.Point(127, 59)
+        Me.cstmr_list.Location = New System.Drawing.Point(127, 62)
         Me.cstmr_list.Name = "cstmr_list"
         Me.cstmr_list.Size = New System.Drawing.Size(472, 196)
         Me.cstmr_list.TabIndex = 0
@@ -160,7 +160,7 @@ Partial Class form_customer
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
-        Me.ClientSize = New System.Drawing.Size(609, 266)
+        Me.ClientSize = New System.Drawing.Size(625, 266)
         Me.ControlBox = False
         Me.Controls.Add(Me.close_btn_cstmr)
         Me.Controls.Add(Me.backup_db)
