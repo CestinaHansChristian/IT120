@@ -27,9 +27,9 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles backup_db.Click
         Try
             Process.Start("cmd", "/c mysqldump -u root -p Admin123 it120e > C:\Users\user\Desktop\backupDB.sql")
-            MessageBox.Show("Backup successfully created and added to Desktop", vbInformation, "Status")
+            MsgBox("Backup successfully created and added to Desktop", vbOKOnly, "Status")
         Catch ex As Exception
-            MessageBox.Show("Unable to create backup file", vbInformation, "Status")
+            MsgBox("Unable to create backup file", vbOKOnly, "Status")
         End Try
     End Sub
 
