@@ -1,4 +1,4 @@
-﻿Public Class update_table
+﻿Public Class Ordered_items_update
     Private Sub btn_oi_insert_Click(sender As Object, e As EventArgs) Handles btn_oi_insert.Click
         MsgBox("Record updated", vbOK, "Status")
     End Sub
