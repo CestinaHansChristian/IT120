@@ -1,4 +1,5 @@
-﻿Imports System.IO
+﻿Imports System.Diagnostics.Eventing
+Imports System.IO
 Imports System.Windows.Forms.VisualStyles
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.VisualBasic.FileIO
@@ -43,6 +44,7 @@ Public Class form_customer
 
     Private Sub load_cstmr_info_Click(sender As Object, e As EventArgs) Handles load_cstmr_info.Click
         Try
+            grid_view_customer.Rows.Clear()
             ' load file
             load_data.Title = "Select a load file"
             load_data.Filter = "CSV FILES | *.csv"
@@ -50,16 +52,15 @@ Public Class form_customer
 
             ' store file location and name
             Dim file_loc As String = load_data.FileName
+
             Dim reader As New TextFieldParser(file_loc)
             reader.SetDelimiters(",")
-            reader.TextFieldType = FileIO.FieldType.Delimited
+            reader.TextFieldType = FieldType.Delimited
             Dim thisRow As String()
             While Not reader.EndOfData
                 Try
                     thisRow = reader.ReadFields
-                    For Each curfield As String In thisRow
-                        grid_view_customer.Rows.Add(thisRow)
-                    Next
+                    grid_view_customer.Rows.Add(thisRow)
                 Catch ex As Exception
                     MsgBox(ex.Message & "Invalid option")
                 End Try
