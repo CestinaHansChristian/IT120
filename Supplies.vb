@@ -23,4 +23,13 @@
         Me.Close()
     End Sub
 
+    Private Sub Form_supply_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        openDB()
+        Dim formThis As String = "Select * from products"
+        load_data_to_grid(formThis, supply_view)
+    End Sub
+
+    Private Sub Export_button_excel_Click(sender As Object, e As EventArgs) Handles Export_button_excel.Click
+        toExcel(supply_view, "Supplies")
+    End Sub
 End Class

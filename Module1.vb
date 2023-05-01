@@ -1,29 +1,102 @@
-﻿'Imports MySql.Data.MySqlClient
-'Module Module1
-'    Public myconn As New MySqlConnection
-'    Public sqlcon As String
-'    Public strSQL As String
+﻿Imports MySql.Data.MySqlClient
+Imports System.Data.OleDb
+Imports Microsoft.Office.Interop
+Module Module1
+    Public myconn As New MySqlConnection
+    Public myConnectionStr As String
+    Public strSql As String
+    Public cstmr_gridview As DataGridView
 
-'    Public Sub openDB()
-'        Login_page.Close()
-'        form_customer.Show()
-'        sqlcon = "server=localhost;" _
-'                    & "uid=root;" _
-'                    & "pwd=Admin123;" _
-'                    & "database=test"
-'        Try
-'            myconn.ConnectionString = sqlcon
-'            myconn.Open()
-'            MsgBox("Success", vbInformation, "Status")
+    Public Sub openDB()
+        myConnectionStr = "server=localhost;" _
+                    & "port=3306;" _
+                    & "uid=root;" _
+                    & "pwd=Admin123;" _
+                    & "database=It120e"
+        Try
+            myconn.ConnectionString = myConnectionStr
+            myconn.Open()
+            myconn.Close()
+        Catch ex As MySqlException
+            Select Case ex.Number
+                Case 0
+                    MsgBox("Cannot Connect to Server")
+                Case 1045
+                    MsgBox("Invalid Username or password!")
+            End Select
+        End Try
+    End Sub
+    Public Sub closeDB()
+        myconn.Dispose()
+        myconn.Close()
+        MsgBox("Connection Terminated", vbInformation, "Status")
+    End Sub
+    Public Sub toExcel(ByVal dataView As DataGridView, ByVal formName As String)
+        Dim xlsPath As String = System.IO.Directory.GetCurrentDirectory & "\..\..\reportXls\template\"
+        Dim xlsFile As String = System.IO.Directory.GetCurrentDirectory & "\..\..\reportXls\reportGenerated\"
+        Dim excelApp As Excel.Application
+        Dim excelWBook As Excel.Workbook
+        Dim excelSheet As Excel.Worksheet
+        Dim date_time As DateTime = DateTime.Now
 
-'        Catch e As MySqlException
-'            MsgBox("Error invalid credentials")
-'        End Try
-'    End Sub
-'    Public Sub closeDB()
-'        myconn.Close()
-'        myconn.Dispose()
-'        MsgBox("Closed", vbInformation, "Status")
-'    End Sub
+        Try
+            excelApp = New Excel.Application
+            excelWBook = excelApp.Workbooks.Add()
+            excelSheet = excelWBook.Worksheets(1)
+            Dim excelRange As Excel.Range = excelSheet.Range("B5").Resize(dataView.RowCount, dataView.ColumnCount)
+            Dim cellvalues(dataView.RowCount - 1, dataView.ColumnCount - 1) As Object
+            For indexA As Integer = 0 To dataView.Rows.Count - 1
+                For indexB As Integer = 0 To dataView.Columns.Count - 1
+                    cellvalues(indexA, indexB) = dataView.Rows(indexA).Cells(indexB).Value
+                Next
+            Next
 
-'End Module
+            excelSheet.Cells(3, 4) = formName
+
+            excelRange.Value = cellvalues
+            excelSheet.Cells.EntireColumn.AutoFit()
+            excelSheet.Protect("adminOnly")
+            excelApp.Visible = True
+            excelApp.UserControl = True
+            excelApp.Quit()
+
+            releaseObject(excelApp)
+            releaseObject(excelSheet)
+            releaseObject(excelWBook)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+
+        End Try
+    End Sub
+
+    Public Sub load_data_to_grid(ByVal query As String)
+        With form_customer
+            openDB()
+            Dim dtable As New DataTable()
+            Dim adapter As New MySqlDataAdapter(query, myconn)
+            adapter.Fill(dtable)
+            cstmr_gridview.DataSource = dtable
+        End With
+    End Sub
+
+    Public Sub load_data_to_grid(ByVal query As String, ByVal gridview As DataGridView)
+        With form_customer
+            openDB()
+            Dim dtable As New DataTable()
+            Dim adapter As New MySqlDataAdapter(query, myconn)
+            adapter.Fill(dtable)
+            gridview.DataSource = dtable
+        End With
+    End Sub
+    Private Sub releaseObject(ByVal systemObj As Object)
+        Try
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(systemObj)
+            systemObj = Nothing
+        Catch ex As Exception
+            systemObj = Nothing
+        Finally
+            GC.Collect()
+        End Try
+    End Sub
+
+End Module

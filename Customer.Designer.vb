@@ -31,12 +31,8 @@ Partial Class form_customer
         Me.close_btn_cstmr = New System.Windows.Forms.Button()
         Me.load_cstmr_info = New System.Windows.Forms.Button()
         Me.grid_view_customer = New System.Windows.Forms.DataGridView()
-        Me.id_col = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.fname_col = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lname_col = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.phone_num_col = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.email_col = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.load_data = New System.Windows.Forms.OpenFileDialog()
+        Me.btn_export_cstmr = New System.Windows.Forms.Button()
+        Me.open_file = New System.Windows.Forms.OpenFileDialog()
         CType(Me.grid_view_customer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -121,7 +117,7 @@ Partial Class form_customer
         '
         Me.load_cstmr_info.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.load_cstmr_info.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.load_cstmr_info.Location = New System.Drawing.Point(435, 20)
+        Me.load_cstmr_info.Location = New System.Drawing.Point(453, 19)
         Me.load_cstmr_info.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.load_cstmr_info.Name = "load_cstmr_info"
         Me.load_cstmr_info.Size = New System.Drawing.Size(199, 51)
@@ -135,8 +131,10 @@ Partial Class form_customer
         Me.grid_view_customer.AllowUserToDeleteRows = False
         Me.grid_view_customer.AllowUserToResizeColumns = False
         Me.grid_view_customer.AllowUserToResizeRows = False
-        Me.grid_view_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grid_view_customer.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.id_col, Me.fname_col, Me.lname_col, Me.phone_num_col, Me.email_col})
+        Me.grid_view_customer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.grid_view_customer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.grid_view_customer.ColumnHeadersHeight = 29
+        Me.grid_view_customer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         Me.grid_view_customer.ImeMode = System.Windows.Forms.ImeMode.Off
         Me.grid_view_customer.Location = New System.Drawing.Point(149, 128)
         Me.grid_view_customer.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
@@ -151,49 +149,20 @@ Partial Class form_customer
         Me.grid_view_customer.Size = New System.Drawing.Size(609, 293)
         Me.grid_view_customer.TabIndex = 11
         '
-        'id_col
+        'btn_export_cstmr
         '
-        Me.id_col.HeaderText = "ID"
-        Me.id_col.MinimumWidth = 6
-        Me.id_col.Name = "id_col"
-        Me.id_col.ReadOnly = True
-        Me.id_col.Width = 125
+        Me.btn_export_cstmr.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btn_export_cstmr.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btn_export_cstmr.Location = New System.Drawing.Point(333, 20)
+        Me.btn_export_cstmr.Name = "btn_export_cstmr"
+        Me.btn_export_cstmr.Size = New System.Drawing.Size(104, 51)
+        Me.btn_export_cstmr.TabIndex = 12
+        Me.btn_export_cstmr.Text = "Export"
+        Me.btn_export_cstmr.UseVisualStyleBackColor = False
         '
-        'fname_col
+        'open_file
         '
-        Me.fname_col.HeaderText = "First Name"
-        Me.fname_col.MinimumWidth = 6
-        Me.fname_col.Name = "fname_col"
-        Me.fname_col.ReadOnly = True
-        Me.fname_col.Width = 125
-        '
-        'lname_col
-        '
-        Me.lname_col.HeaderText = "Last Name"
-        Me.lname_col.MinimumWidth = 6
-        Me.lname_col.Name = "lname_col"
-        Me.lname_col.ReadOnly = True
-        Me.lname_col.Width = 125
-        '
-        'phone_num_col
-        '
-        Me.phone_num_col.HeaderText = "Phone Number"
-        Me.phone_num_col.MinimumWidth = 6
-        Me.phone_num_col.Name = "phone_num_col"
-        Me.phone_num_col.ReadOnly = True
-        Me.phone_num_col.Width = 125
-        '
-        'email_col
-        '
-        Me.email_col.HeaderText = "Email"
-        Me.email_col.MinimumWidth = 6
-        Me.email_col.Name = "email_col"
-        Me.email_col.ReadOnly = True
-        Me.email_col.Width = 125
-        '
-        'load_data
-        '
-        Me.load_data.FileName = "load_data"
+        Me.open_file.FileName = "open_file"
         '
         'form_customer
         '
@@ -202,6 +171,7 @@ Partial Class form_customer
         Me.BackColor = System.Drawing.Color.Khaki
         Me.ClientSize = New System.Drawing.Size(771, 437)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btn_export_cstmr)
         Me.Controls.Add(Me.grid_view_customer)
         Me.Controls.Add(Me.load_cstmr_info)
         Me.Controls.Add(Me.close_btn_cstmr)
@@ -231,11 +201,8 @@ Partial Class form_customer
     Friend WithEvents backup_db As Button
     Friend WithEvents close_btn_cstmr As Button
     Friend WithEvents load_cstmr_info As Button
-    Friend WithEvents grid_view_customer As DataGridView
-    Friend WithEvents id_col As DataGridViewTextBoxColumn
-    Friend WithEvents fname_col As DataGridViewTextBoxColumn
-    Friend WithEvents lname_col As DataGridViewTextBoxColumn
-    Friend WithEvents phone_num_col As DataGridViewTextBoxColumn
-    Friend WithEvents email_col As DataGridViewTextBoxColumn
     Friend WithEvents load_data As OpenFileDialog
+    Friend WithEvents btn_export_cstmr As Button
+    Friend WithEvents open_file As OpenFileDialog
+    Friend WithEvents grid_view_customer As DataGridView
 End Class

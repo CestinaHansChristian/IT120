@@ -1,4 +1,6 @@
-﻿Public Class Form_orderItems
+﻿Imports MySql.Data.MySqlClient
+
+Public Class Form_orderItems
     Private Sub btn_suppl_Click(sender As Object, e As EventArgs) Handles btn_suppl.Click
 
         Form_supply.Show()
@@ -35,4 +37,13 @@
         Ordered_items_update.Show()
     End Sub
 
+    Private Sub Form_orderItems_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        openDB()
+        Dim formThis As String = "Select * from orderitems"
+        load_data_to_grid(formThis, oi_table)
+    End Sub
+
+    Private Sub Export_Ordered_items_Click(sender As Object, e As EventArgs) Handles Export_Ordered_items.Click
+        toExcel(oi_table, "Ordered Items")
+    End Sub
 End Class

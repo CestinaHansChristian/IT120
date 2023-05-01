@@ -29,29 +29,32 @@ Partial Class Login_page
         Me.login_btn = New System.Windows.Forms.Button()
         Me.exit_btn = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.pass_visibility = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtbox_user
         '
-        Me.txtbox_user.Location = New System.Drawing.Point(124, 80)
+        Me.txtbox_user.Location = New System.Drawing.Point(142, 107)
+        Me.txtbox_user.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtbox_user.Name = "txtbox_user"
-        Me.txtbox_user.Size = New System.Drawing.Size(207, 23)
+        Me.txtbox_user.Size = New System.Drawing.Size(236, 27)
         Me.txtbox_user.TabIndex = 0
         '
         'txtbox_pass
         '
-        Me.txtbox_pass.Location = New System.Drawing.Point(124, 132)
+        Me.txtbox_pass.Location = New System.Drawing.Point(142, 163)
+        Me.txtbox_pass.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txtbox_pass.Name = "txtbox_pass"
-        Me.txtbox_pass.Size = New System.Drawing.Size(208, 23)
+        Me.txtbox_pass.Size = New System.Drawing.Size(237, 27)
         Me.txtbox_pass.TabIndex = 1
         '
         'lbl_fname
         '
         Me.lbl_fname.AutoSize = True
         Me.lbl_fname.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lbl_fname.Location = New System.Drawing.Point(30, 77)
+        Me.lbl_fname.Location = New System.Drawing.Point(34, 103)
         Me.lbl_fname.Name = "lbl_fname"
-        Me.lbl_fname.Size = New System.Drawing.Size(81, 21)
+        Me.lbl_fname.Size = New System.Drawing.Size(102, 28)
         Me.lbl_fname.TabIndex = 2
         Me.lbl_fname.Text = "username"
         '
@@ -59,9 +62,9 @@ Partial Class Login_page
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(30, 131)
+        Me.Label1.Location = New System.Drawing.Point(34, 163)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(80, 21)
+        Me.Label1.Size = New System.Drawing.Size(98, 28)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "password"
         '
@@ -70,9 +73,10 @@ Partial Class Login_page
         Me.login_btn.BackColor = System.Drawing.Color.PaleGreen
         Me.login_btn.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.login_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.login_btn.Location = New System.Drawing.Point(124, 197)
+        Me.login_btn.Location = New System.Drawing.Point(142, 263)
+        Me.login_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.login_btn.Name = "login_btn"
-        Me.login_btn.Size = New System.Drawing.Size(75, 35)
+        Me.login_btn.Size = New System.Drawing.Size(86, 47)
         Me.login_btn.TabIndex = 1
         Me.login_btn.Text = "Login"
         Me.login_btn.UseVisualStyleBackColor = False
@@ -82,9 +86,10 @@ Partial Class Login_page
         Me.exit_btn.BackColor = System.Drawing.Color.DarkSalmon
         Me.exit_btn.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.exit_btn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.exit_btn.Location = New System.Drawing.Point(256, 197)
+        Me.exit_btn.Location = New System.Drawing.Point(293, 263)
+        Me.exit_btn.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.exit_btn.Name = "exit_btn"
-        Me.exit_btn.Size = New System.Drawing.Size(75, 35)
+        Me.exit_btn.Size = New System.Drawing.Size(86, 47)
         Me.exit_btn.TabIndex = 2
         Me.exit_btn.Text = "Exit"
         Me.exit_btn.UseVisualStyleBackColor = False
@@ -93,19 +98,34 @@ Partial Class Login_page
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(160, 21)
+        Me.Label2.Location = New System.Drawing.Point(183, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(69, 30)
+        Me.Label2.Size = New System.Drawing.Size(89, 37)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Login"
         '
+        'pass_visibility
+        '
+        Me.pass_visibility.AutoSize = True
+        Me.pass_visibility.BackColor = System.Drawing.Color.Khaki
+        Me.pass_visibility.Checked = True
+        Me.pass_visibility.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.pass_visibility.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.pass_visibility.Location = New System.Drawing.Point(142, 218)
+        Me.pass_visibility.Name = "pass_visibility"
+        Me.pass_visibility.Size = New System.Drawing.Size(128, 24)
+        Me.pass_visibility.TabIndex = 7
+        Me.pass_visibility.Text = "Hide Password"
+        Me.pass_visibility.UseVisualStyleBackColor = False
+        '
         'Login_page
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Khaki
-        Me.ClientSize = New System.Drawing.Size(401, 265)
+        Me.ClientSize = New System.Drawing.Size(458, 364)
         Me.ControlBox = False
+        Me.Controls.Add(Me.pass_visibility)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.exit_btn)
         Me.Controls.Add(Me.login_btn)
@@ -113,7 +133,8 @@ Partial Class Login_page
         Me.Controls.Add(Me.lbl_fname)
         Me.Controls.Add(Me.txtbox_pass)
         Me.Controls.Add(Me.txtbox_user)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
         Me.MdiChildrenMinimizedAnchorBottom = False
         Me.MinimizeBox = False
@@ -132,4 +153,5 @@ Partial Class Login_page
     Friend WithEvents login_btn As Button
     Friend WithEvents exit_btn As Button
     Friend WithEvents Label2 As Label
+    Friend WithEvents pass_visibility As CheckBox
 End Class

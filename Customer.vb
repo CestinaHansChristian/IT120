@@ -3,6 +3,7 @@ Imports System.IO
 Imports System.Windows.Forms.VisualStyles
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.VisualBasic.FileIO
+Imports MySql.Data.MySqlClient
 
 Public Class form_customer
 
@@ -39,19 +40,19 @@ Public Class form_customer
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles close_btn_cstmr.Click
+        closeDB()
         Application.Exit()
     End Sub
 
     Private Sub load_cstmr_info_Click(sender As Object, e As EventArgs) Handles load_cstmr_info.Click
         Try
-            grid_view_customer.Rows.Clear()
             ' load file
-            load_data.Title = "Select a load file"
-            load_data.Filter = "CSV FILES | *.csv"
-            load_data.ShowDialog()
+            open_file.Title = "Select a load file"
+            open_file.Filter = "CSV FILES | *.csv"
+            open_file.ShowDialog()
 
             ' store file location and name
-            Dim file_loc As String = load_data.FileName
+            Dim file_loc As String = open_file.FileName
 
             Dim reader As New TextFieldParser(file_loc)
             reader.SetDelimiters(",")
@@ -69,6 +70,18 @@ Public Class form_customer
         Catch ex As Exception
             MsgBox(ex.Message & "invalid option")
         End Try
+    End Sub
+
+    Private Sub btn_export_cstmr_Click(sender As Object, e As EventArgs) Handles btn_export_cstmr.Click
+        openDB()
+        toExcel(grid_view_customer, "Customer Details")
+    End Sub
+
+    Private Sub form_customer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        openDB()
+        Dim formThis As String = "Select * from customers"
+        cstmr_gridview = grid_view_customer
+        load_data_to_grid(formThis)
     End Sub
 End Class
 
